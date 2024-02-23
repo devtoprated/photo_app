@@ -1,0 +1,16 @@
+<h2>Add Post</h2>
+<div class="add">
+<%= form_with(model: Post.new , url: posts_path ,local: true, method: :post) do |form| %>
+    <span class="labl"><%= form.label :title, "Enter Title:" %></span>
+    <span class="box"><%= form.text_field :title ,:required => true%></span>
+    <br><br>
+    <span class="labl2"><%= form.label :image, "Upload Image:" %> </span>
+    <span class="box2"><%= form.file_field :image , accept:'image/*' ,:required => true%></span>
+    <br><br>
+    <span class="labl3"><%= form.label :comment, "Add Comment:" %></span>
+    <span class="box3"><%= form.text_field :comment ,:required => true%></span>
+    <br><br> 
+    <%= form.submit "Post",class: "btn-del" %>
+<% end %>
+</div>
+

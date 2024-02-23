@@ -1,0 +1,40 @@
+<h2>WELCOME TO DASHBOARD </h2>
+<div class="email">You now login as <span style="color:red;"> <%= current_user.email%> </div>
+<div class="btn-body"><%= button_to "Logout" , destroy_user_session_path , method: :delete , class: "logout"%></span></div>
+<div class="add-new-btn"><%= link_to 'Upload New Post' , new_post_path , method: :post , class: "btn"%></div>
+<p style="color:green;text-align:center;font-size:20px;"><%= notice%></p>
+<h3 style="color:green;">Available Posts are:</h3>
+
+<div class="data">
+    <%@post.each do |post|%>
+        <div class="each-data">
+            <p> <span class="data-field">Title:</span><%= post.title%></p>
+            <p> <span class="data-field">Comment:</span><%= post.comment%></p>
+            <% if post.image.attached?%>
+                <p style="text-align:center;"><%= image_tag post.image , size: '100x100'%></p>
+            <%else %>
+                <p style="color:red;">image not found</p>
+            <% end %>
+            
+            
+                <p style="text-align:center;"> <%= link_to 'Update ',edit_post_path(post.id), :method => 'update', class: "btn-update"%> </p> 
+                
+
+             <%# delete button %>
+            <p style="text-align:center;font-size:25px;"> <%= button_to 'Delete', post_path(post.id), :method => 'delete' , class: "btn-del"%></p>
+            <%# delete button ends %>
+            <%#  like functionality%>
+            <% if user_signed_in?%>
+                <% if current_user.likes.exists?(post: post) %>
+                    <%= button_to 'Unlike', unlike_post_path(post), method: :delete , class: "btn-white"%>
+                <% else %>
+                    <%= button_to 'Like', like_post_path(post), method: :post , class: "btn-red"%>
+                <% end %>
+                <p class="like"><%= pluralize(post.likes.count, 'like') %></p>
+            <% end %>
+            <%#like section ends  %>
+        </div>
+    <%end%>
+    
+
+</div>

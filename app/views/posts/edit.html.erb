@@ -1,0 +1,24 @@
+<h2>Update Post</h2>
+<div class="add">
+
+
+<%= form_for(@post, url: post_path, local: true, method: :patch) do |form| %>
+    <span class="labl"><%= form.label :title, "Enter Title:" %></span>
+    <span class="box"><%= form.text_field :title %></span>
+    <br><br>
+    <div><% if @post.image.attached? %>
+        <span style="font-size: 20px;">Current Image:</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <%= image_tag @post.image  , size: '100x100'%>
+        <% end %>
+        </div>
+    <br><br>
+    <span class="labl2"><%= form.label :image, "Upload New Image:" %> </span>
+    <span class="box2"><%= form.file_field :image , accept:'image/*' %></span>
+    <br><br>
+    <span class="labl3"><%= form.label :comment, "Add Comment:" %></span>
+    <span class="box3"><%= form.text_field :comment %></span>
+    <br><br> 
+    <%= form.submit "Update Post",class: "btn-del" %>
+<% end %>
+</div>
+

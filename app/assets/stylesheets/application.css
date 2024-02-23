@@ -1,0 +1,215 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+body{
+    background-color:whitesmoke;
+}
+
+ h2{
+    /* border: 1px solid black; */
+    max-width:400px;
+    text-align: center;
+    color: black;
+    padding: auto;
+    margin: auto;
+ }
+ .email{
+    /* border: 1px solid black; */
+    max-width: 450px;
+    position: fixed;
+    top :10px;
+    left :75%;
+    font-weight: bold;
+    font-size: 20px;
+
+ }
+ .logout{
+    background: red;
+  padding: 11px 20px 11px 20px;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+ }
+ .btn-body{
+
+    max-width: 122px;
+    position: fixed;
+    right: 1%;
+}
+.add-new-btn{ 
+    /* max-width: 189px; */
+    padding: 70px 14px 14px 0px;
+      padding-top: 70px;
+      padding-right: 14px;
+      padding-bottom: 14px;
+      padding-left: 0px;
+}
+.btn{
+
+  font-weight: bold;
+  font-size: 22px;
+  /* text-decoration: none; */
+  cursor: pointer;
+  color: red;
+}
+.data{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    background-color: bisque;
+}
+.each-data{
+    background-color: black;
+    color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 7px;
+    width:14%;
+    text-align: center;
+
+}
+
+.btn-del{
+    background: green;
+    padding: 8px 8px 8px 8px;
+    /* margin-left: 50px; */
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 13px;
+    cursor: pointer;
+
+}
+
+.data-field{
+    font-size: 17px;
+    margin: 7px;
+
+}
+
+.field{
+    color:red;
+    padding: 9px;
+  font-size: 21px;
+}
+
+.btn-update{
+    text-decoration:none;
+    margin: auto;
+    padding: auto;
+
+
+}
+.add{
+
+    color:white;
+    text-align: center;
+    border:1px solid black;
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    margin: auto;
+    background-color: black;
+    max-width: 50%;   
+}
+.box{
+    padding-left: 80px;
+
+}
+.box2{
+    padding-left: 59px;
+
+}
+
+.box3{
+    padding: 28px;
+
+}
+.labl{
+    padding: 50px;
+    font-size: 20px;
+}
+.labl2{
+    padding: 50px;
+    font-size: 20px;
+}
+.labl3{
+    padding: 28px;
+    font-size: 20px;
+}
+
+.color-white{
+    color: white;
+}
+
+.body-login{
+    padding: auto;
+    margin: auto;
+    max-width:50% ;
+    border: 1px solid black;
+
+}
+
+.btn-red{
+    background: red;
+  padding: 8px 8px 8px 8px;
+  /* margin-left: 57px; */
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 14px;
+  cursor: pointer;
+  color: white;
+  
+
+}
+
+.btn-white{
+    background: white;
+  padding: 8px 8px 8px 8px;
+  /* margin-left: 44px; */
+  font-weight: bold;
+  font-size: 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: blue;
+
+}
+
+.like{
+    color: goldenrod;
+  margin: auto;
+  padding: 21px 8px 8px 7px;
+    padding-top: 10px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    padding-left: 7px;
+  max-width: 61px;
+}
+
+.fieldset{
+    border: 1px solid black;
+  max-width: 50%;
+  padding: auto;
+  margin: auto;
+}
+
+a{
+    color: green;
+    padding: 10px;
+}
+
+
+
+
